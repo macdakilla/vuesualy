@@ -1,6 +1,6 @@
 import _Vue, { PluginFunction } from 'vue';
 
-import * as components from './lib-components';
+import * as components from './components';
 
 const install: PluginFunction<any> = function installVuesualy(Vue: typeof _Vue) {
   Object.entries(components).forEach(([componentName, component]) => {
@@ -10,4 +10,5 @@ const install: PluginFunction<any> = function installVuesualy(Vue: typeof _Vue) 
 
 export default install;
 
-export * from './lib-components';
+export * from './components';
+export * from './mixins';
